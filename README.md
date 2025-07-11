@@ -32,6 +32,6 @@
         <li>Use the search bar to find specific topics or posts.</li>
     </ul>
     <h2 id="access">Access</h2>
-    <p>U can access the website via the <a href="https://gamesphere-ahm7.onrender.com/home" target="_blank">link</a> or download the project an run it locally. I have used SUPABASE to host my postgreSQL database and Render to host my website. Note that RENDER is a free service hence, it might sometimes take 20-30s to load. Please have patience.</p>
+    <p>Currently the deployment of the database is down since the free tier of Supabase has expired.</p>
     
     
