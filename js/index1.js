@@ -20,13 +20,14 @@ const upload = multer({
     fieldSize: 200* 1024 * 1024 
   }
 });
+
 const db = new pg.Client({
-    user: 'postgres.xpnurtaaismyqcelpiqk',
-    host: 'aws-0-ap-south-1.pooler.supabase.com',
-    database: 'postgres',
-    password: 'xGhc6elnE2bTZFp2',
-    port: 5432,
-  });
+  user: 'postgres.eedtbsbidvmugkhccwqd',
+  host: 'aws-0-ap-south-1.pooler.supabase.com',
+  database: 'postgres',
+  password: 'Gopi@123',
+  port: 5432,
+});
 
 db.connect();
 
@@ -113,7 +114,7 @@ app.use((req, res, next) => {
 
 
 app.get('/home', async(req, res) => {
-  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 3 AND 8 ORDER BY id DESC`;
+  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 6 AND 9 ORDER BY id DESC`;
     const { rows } = await db.query(trendingQuery);
     if (req.loggedin) {
     const token = req.cookies.auth_token;
@@ -319,7 +320,7 @@ app.post('/search', async (req, res) => {
 
 
 app.get('/trending', async (req, res) => {
-  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 3 AND 7 ORDER BY id ASC`;
+  const trendingQuery = `SELECT posts.*, users.username FROM posts JOIN users ON posts.id = users.id WHERE postid BETWEEN 5 AND 9 ORDER BY id ASC`;
   try {
     const { rows: posts } = await db.query(trendingQuery);
     res.render('trending', { loggedin: req.loggedin, posts: posts });
