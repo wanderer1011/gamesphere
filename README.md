@@ -32,6 +32,6 @@
         <li>Use the search bar to find specific topics or posts.</li>
     </ul>
     <h2 id="access">Access</h2>
-    <p>Currently the deployment of the database is down since the free tier of Supabase has expired.</p>
+    <p>Access it on : https://gamesphere-ahm7.onrender.com/home</p>
     
     
